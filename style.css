@@ -142,3 +142,172 @@ button:hover {
   font-size: 48px;
   margin-bottom: 20px;
 }
+
+
+/* NASA Space Explorer Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.space-card {
+    background-color: #14213d;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.space-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.space-card h3 {
+    font-size: 18px;
+    padding: 10px 15px 0;
+}
+
+.space-card p {
+    font-size: 14px;
+    padding: 0 15px;
+    color: #cccccc;
+}
+
+/* Make gallery work on tablets */
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Make gallery work on phones */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* NASA image modal */
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #14213d;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 750px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-content h2 {
+    margin-top: 15px;
+}
+
+.modal-content p {
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+.close-modal {
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+    background: #fc3d21;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Center the placeholder before images load */
+.gallery .placeholder {
+    grid-column: 1 / -1;
+    text-align: center;
+    width: 100%;
+}
+#modalExplanation {
+    font-size: 16px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+/* Center the loading message */
+.gallery.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    text-align: center;
+}
+
+/* Extra Credit: Hover Zoom Effect */
+
+.space-card {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.space-card img {
+    transition: transform 0.3s ease;
+}
+
+.space-card:hover img {
+    transform: scale(1.08);
+}
+
+
+.space-fact {
+    background-color: #14213d;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.space-card a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 220px;
+    background-color: #07152e;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.space-card a:hover {
+    background-color: #233d69;
+}
