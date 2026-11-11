@@ -88,11 +88,18 @@ data.forEach(function(photo) {
     }
 });
         
-    } catch (error) {
-        console.error(error);
-        gallery.classList.remove("loading");
-        gallery.textContent = "Error loading space photos.";
+   } catch (error) {
+    console.error(error);
+    gallery.classList.remove("loading");
+
+    if (!navigator.onLine) {
+        gallery.textContent =
+            "You are offline. Connect to the internet or try a previously loaded date range.";
+    } else {
+        gallery.textContent =
+            "Error loading space photos. Please try again.";
     }
+}
 }
 
 document.querySelector(".filters button")

@@ -311,3 +311,41 @@ button:hover {
 .space-card a:hover {
     background-color: #233d69;
 }
+
+/* PWA buttons */
+.pwa-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.pwa-controls button {
+    width: auto;
+    background-color: #14213d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pwa-controls button:hover {
+    background-color: #233d69;
+}
+
+/* Offline warning */
+#offlineStatus {
+    background-color: #fc3d21;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Keep hidden elements hidden */
+[hidden] {
+    display: none !important;
+}

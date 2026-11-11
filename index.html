@@ -5,7 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NASA Space Explorer</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#14213d">
+  <link rel="icon" href="img/icon-192.png">
+  <link rel="apple-touch-icon" href="img/icon-192.png">
 </head>
+<!-- PWA buttons -->
+<div class="pwa-controls">
+  <button id="installButton" hidden>
+    Install NASA App
+  </button>
+
+  <button id="notificationButton">
+    Enable Notifications
+  </button>
+</div>
+
+<!-- Shows when the internet is disconnected -->
+<p id="offlineStatus" role="status" hidden>
+  You are offline. Previously loaded NASA data may still work.
+</p>
 <body>
   <div class="container">
     <header class="site-header">
@@ -44,5 +63,6 @@
 </div>
   <script src="js/dateRange.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/pwa.js"></script>
 </body>
 </html>
